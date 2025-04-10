@@ -1,0 +1,117 @@
+/* Base styles */
+body {
+    background: #0a0a0a;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Neon text effects */
+.neon-text-magenta {
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff,
+                 0 0 10px #ff00ff,
+                 0 0 20px #ff00ff,
+                 0 0 40px #ff00ff;
+    animation: neon-pulse 1.5s ease-in-out infinite alternate;
+}
+
+.neon-text-cyan {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff,
+                 0 0 10px #00ffff,
+                 0 0 20px #00ffff,
+                 0 0 40px #00ffff;
+    animation: neon-pulse 1.5s ease-in-out infinite alternate;
+}
+
+.neon-text-yellow {
+    color: #ffff00;
+    text-shadow: 0 0 5px #ffff00,
+                 0 0 10px #ffff00,
+                 0 0 20px #ffff00,
+                 0 0 40px #ffff00;
+    animation: neon-pulse 1.5s ease-in-out infinite alternate;
+}
+
+/* Neon border effect */
+.neon-border-cyan {
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 5px #00ffff,
+                inset 0 0 5px #00ffff;
+}
+
+.neon-bg-cyan {
+    background: #00ffff;
+    color: #000;
+    box-shadow: 0 0 10px #00ffff,
+                0 0 20px #00ffff,
+                0 0 40px #00ffff;
+}
+
+/* Animations */
+@keyframes neon-pulse {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Typing effect */
+.happy-birthday {
+    opacity: 0;
+    animation: fade-in 1s ease-out forwards;
+}
+
+.details {
+    opacity: 0;
+    animation: fade-in 1s ease-out 1s forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Countdown container styles */
+.time-segment {
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.time-segment:hover {
+    transform: scale(1.05);
+}
+
+/* Particle container */
+#particles-js {
+    width: 100%;
+    height: 100%;
+}
+
+/* Audio button hover effect */
+.play-button:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .countdown-container {
+        gap: 4px;
+    }
+    
+    .time-segment {
+        padding: 10px;
+    }
+}
